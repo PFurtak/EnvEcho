@@ -1,4 +1,4 @@
-# from django.db import models
+from django.db import models
 # from datetime import datetime
 # from envecho.techs.models import Tech
 
