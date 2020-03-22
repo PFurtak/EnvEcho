@@ -1,10 +1,23 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">EnvEcho</h1>
-      <p class="lead">IT inventory documentation simplified</p>
+
+<!-- Showcase -->
+<section id="showcase">
+    <div class="container text-center">
+      <div class="home-search p-3">
+        <div class="overlay p-5">
+          <h1 class="display-1 mb-5">
+            EnvEcho
+          </h1>
+          <p class="lead">IT documentation simplified.</p>
+          <p class="lead">Helping you keep track of the infrastructure and employees your business relies on.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+
 {% endblock %}
