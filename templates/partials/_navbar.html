@@ -55,7 +55,7 @@
         class="nav-item mr-3"
         {% endif %}
         >
-          <a class="nav-link" href="{% url 'index' %}">
+          <a class="nav-link" href="{% url 'admin:index' %}">
            Welcome {{ user.username }}!</a
           >
         </li>
@@ -63,7 +63,7 @@
           <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
             <i class="fas fa-sign-out-alt"></i> Logout
           </a>
-          <form action="{% url 'index' %}" id="logout" method="POST">
+          <form action="{% url 'admin:index' %}" id="logout" method="POST">
             {% csrf_token %}
             <input type="hidden">
           </form>
@@ -84,7 +84,7 @@
         class="nav-item mr-3"
         {% endif %}
         >
-          <a class="nav-link" href="{% url 'index' %}">
+          <a class="nav-link" href="{% url 'admin:index' %}">
             <i class="fas fa-sign-in-alt"></i>
 
             Login</a
