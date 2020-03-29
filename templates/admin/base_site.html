@@ -1,12 +1,13 @@
 {% extends 'admin/base.html' %} {% load static %} {% block branding %}
 <h1 id="Head">
-  <img
+  <a href="{% url 'index' %}"> 
+    <img
     src="{% static 'img/logobcs.png' %}"
     alt="BCS"
     height="50"
     width="150"
     class="brand_img"
-  />
+  /></a>
   Admin Console
 </h1>
 {% endblock %} {% block extrastyle %}
