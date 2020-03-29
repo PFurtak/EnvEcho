@@ -14,6 +14,7 @@
                   name="keywords"
                   class="form-control"
                   placeholder="Keywords"
+                  value="{{ values.keywords }}"
                 />
               </div>
   
@@ -24,6 +25,7 @@
                   name="type"
                   class="form-control"
                   placeholder="Type: (Hardware, Software, etc...)"
+                  value="{{ values.type }}"
                 />
               </div>
   
@@ -34,6 +36,7 @@
                   name="vendor"
                   class="form-control"
                   placeholder="Vendor"
+                  value="{{ values.vendor }}"
                 />
               </div>
             </div>
@@ -43,18 +46,20 @@
                 <label class="sr-only">Serial Number</label>
                 <input
                   type="text"
-                  name="serial_number"
+                  name="serial"
                   class="form-control"
                   placeholder="Serial Number"
+                  value="{{ values.serial }}"
                 />
               </div>
               <div class="col-md-6 mb-3">
                 <label class="sr-only">Create Date</label>
                 <input
                   type="text"
-                  name="create_date"
+                  name="created"
                   class="form-control"
                   placeholder="Date Created (YYYY-MM-DD)"
+                  value="{{ values.created }}"
                 />
               </div>
             </div>
@@ -83,7 +88,7 @@
       </nav>
     </div>
   </section>
-  
+
 <!-- Listings -->
 <section id="listings" class="py-4">
     <div class="container">
