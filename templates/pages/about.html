@@ -30,51 +30,39 @@
  <section id="team" class="py-5">
     <div class="container">
       <h2 class="text-center">Our Team</h2>
+      <br />
       <div class="row text-center">
+        {% if techs %}
+        {% for tech in techs %}
         <div class="col-md-4">
-          <img src="assets/img/realtors/kyle.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Kyle Brown</h4>
-          <p class="text-success">
-            <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (555)-555-5555</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> kyle@btrealestate.co</p>
-        </div>
+            <img src="{{ tech.photo.url }}" alt="" class="mb-3">
+            <h4>{{ tech.first_name }} {{ tech.last_name }}</h4>
+            <p class="text-success">
+              {{ tech.position }}</p>
+              <br>
+              <p>{{ tech.description }}</p>
+            <hr>
+            <p>
+              <i class="fas fa-phone"></i> {{ tech.phone }}</p>
+            <p>
+              <i class="fas fa-envelope-open"></i> {{ tech.email }}</p>
+          </div>
+        {% endfor %}
 
-        <div class="col-md-4">
-          <img src="assets/img/realtors/mark.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Mark Hudson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (444)-444-4444</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> mark@btrealestate.co</p>
+        {% else %}
+        <div class="col-md-12">
+            <p>No team members available.</p>
         </div>
-
-        <div class="col-md-4">
-          <img src="assets/img/realtors/jenny.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Jenny Johnson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (333)-333-3333</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> jenny@btrealestate.co</p>
-        </div>
+        {% endif %}
       </div>
     </div>
   </section>
 
-  <!-- Work -->
   <section id="work" class="bg-dark text-white text-center">
     <h1 class="display-4">Employee Management Simplified</h1>
     <br>
     <h3>Update your work force details in the admin console.</h3>
     <h4>( Scheduling coming soon! )</h4>
-   
   </section>
 
 

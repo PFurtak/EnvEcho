@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from article.models import Article
+from techs.models import Tech
 
 
 
@@ -14,4 +15,10 @@ def index(request):
     return render(request, 'pages/index.html', context)
 
 def about(request):
-    return render(request, 'pages/about.html')
+    techs = Tech.objects.order_by('-hire_date')
+
+    context = {
+        'techs': techs,
+    }
+
+    return render(request, 'pages/about.html', context)
